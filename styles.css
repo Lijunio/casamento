@@ -1,0 +1,58 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Remove a barra de rolagem */
+    background: url('imagens/background.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.navbar {
+    width: 100%;
+    background: transparent; 
+    z-index: 1000;
+    transition: background 0.3s ease; 
+}
+
+.navbar.scrolled,
+.navbar .navbar-collapse.show {
+    background: rgba(255, 255, 255, 0.9); 
+}
+
+.navbar .nav-link {
+    color: black !important; 
+}
+
+section {
+    padding: 20px 0;
+}
+
+/*PAGINA CERIMONIA*/
+#map {
+    width: 100%;
+    height: 300px;
+    background: gray;
+}
+
+/* PAGINA NOSSA HISTORIA*/ 
+.carousel-item img {
+    width: auto;
+    height: auto; 
+    object-fit: cover; 
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); 
+    bottom: 0; 
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 10px;
+}
+
+.carousel-caption p {
+    margin: 0;
+    font-size: 1em;
+}
