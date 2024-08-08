@@ -6,6 +6,7 @@ body, html {
     background: url('imagens/background.png') no-repeat center center fixed;
     background-size: cover;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow-x: hidden; 
 }
 
 .navbar {
@@ -36,10 +37,10 @@ section {
 }
 
 /* PAGINA NOSSA HISTORIA*/ 
-
 .carousel-item img.custom-height {
     width: auto;
-    height: 500px; 
+    height: auto; 
+    max-height: 500px; /* Limite máximo de altura */
     object-fit: contain; 
     margin: auto; 
 }
@@ -63,6 +64,11 @@ section {
     padding-top: 60px;
 }
 
+.card-presentes {
+    max-width: 500px; 
+    margin: auto; 
+}
+
 .btn-secondary {
     background-color: #56857f;
     border-color: #d3d3d3;
@@ -81,4 +87,23 @@ section {
     background-color: #56857f;
     border-color: #d3d3d3;
     color: #000;
+}
+
+/* Estilos adicionais para responsividade */
+@media (min-width: 768px) {
+    .container {
+        max-width: 750px; 
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 970px; 
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px; 
+    }
 }

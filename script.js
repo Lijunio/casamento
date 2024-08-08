@@ -1,6 +1,20 @@
-//contagem 
+// Exibir aviso para telas maiores
+$(document).ready(function() {
+    function checkScreenSize() {
+        if ($(window).width() > 1024) {
+            $('#screenSizeModal').modal('show');
+        } else {
+            $('#screenSizeModal').modal('hide');
+        }
+    }
+
+    checkScreenSize();
+    $(window).resize(checkScreenSize);
+});
+
+// Contagem regressiva
 function countdown() {
-    const eventDate = new Date('September 13, 2024 00:00:00').getTime(); // Data de término ajustada para meia-noite
+    const eventDate = new Date('September 13, 2024 00:00:00').getTime();
     const now = new Date().getTime();
     const distance = eventDate - now;
 
@@ -25,34 +39,7 @@ function countdown() {
 
 const countdownInterval = setInterval(countdown, 1000);
 
-
-//mensagem
-document.getElementById('messageForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const name = document.getElementById('name').value;
-    const message = document.getElementById('message').value;
-
-    $.ajax({
-        type: 'POST',
-        url: 'https://api.sendgrid.com/v3/mail/send',
-        headers: {
-            'Authorization': 'Bearer YOUR_SENDGRID_API_KEY',
-            'Content-Type': 'application/json'
-        },
-        data: JSON.stringify({
-            personalizations: [{ to: [{ email: 'eliasjunio.ribeiro95@gmail.com' }] }],
-            from: { email: 'youremail@example.com' },
-            subject: 'Mensagem do site',
-            content: [{ type: 'text/plain', value: `Nome: ${name}\nMensagem: ${message}` }]
-        })
-    }).done(function() {
-        alert('Mensagem enviada com sucesso!');
-    }).fail(function() {
-        alert('Erro ao enviar mensagem.');
-    });
-});
-
-//chave PIX
+// Copiar chave PIX
 function copyPix() {
     var copyText = document.getElementById("pixKey").innerText;
     var textArea = document.createElement("textarea");
