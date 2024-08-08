@@ -3,6 +3,7 @@ body, html {
     padding: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
     background: url('imagens/background.png') no-repeat center center fixed;
     background-size: cover;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -36,10 +37,12 @@ section {
 }
 
 /* PAGINA NOSSA HISTORIA*/ 
-.carousel-item img {
+
+.carousel-item img.custom-height {
     width: auto;
-    height: auto; 
-    object-fit: cover; 
+    height: 500px; 
+    object-fit: contain; 
+    margin: auto; 
 }
 
 .carousel-caption {
@@ -54,4 +57,29 @@ section {
 .carousel-caption p {
     margin: 0;
     font-size: 1em;
+}
+
+/* PAGINA PRESENTES */
+.presentes-section {
+    padding-top: 60px;
+}
+
+.btn-secondary {
+    background-color: #56857f;
+    border-color: #d3d3d3;
+    color: #000;
+}
+
+.btn-secondary:hover {
+    background-color: #bfbfbf;
+    border-color: #bfbfbf;
+    color: #000;
+}
+
+/* PAGINA MENSAGEM */
+
+.btn-primary {
+    background-color: #56857f;
+    border-color: #d3d3d3;
+    color: #000;
 }

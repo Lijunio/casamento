@@ -1,4 +1,4 @@
-// Contagem regressiva
+//contagem 
 function countdown() {
     const eventDate = new Date('September 13, 2024 00:00:00').getTime(); // Data de término ajustada para meia-noite
     const now = new Date().getTime();
@@ -26,7 +26,7 @@ function countdown() {
 const countdownInterval = setInterval(countdown, 1000);
 
 
-// Enviar email
+//mensagem
 document.getElementById('messageForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const name = document.getElementById('name').value;
@@ -52,7 +52,7 @@ document.getElementById('messageForm').addEventListener('submit', function(e) {
     });
 });
 
-// Copiar chave PIX
+//chave PIX
 function copyPix() {
     var copyText = document.getElementById("pixKey").innerText;
     var textArea = document.createElement("textarea");
@@ -61,5 +61,4 @@ function copyPix() {
     textArea.select();
     document.execCommand("Copy");
     textArea.remove();
-    alert("Chave PIX copiada: " + copyText);
 }
