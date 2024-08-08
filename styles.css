@@ -3,7 +3,6 @@ body, html {
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
     background: url('imagens/background.png') no-repeat center center fixed;
     background-size: cover;
     font-family: Georgia, 'Times New Roman', Times, serif;
