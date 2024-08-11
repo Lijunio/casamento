@@ -1,4 +1,4 @@
-// Exibir aviso para telas maiores
+// aviso para telas maiores
 $(document).ready(function() {
     function checkScreenSize() {
         if ($(window).width() > 1024) {
@@ -12,7 +12,7 @@ $(document).ready(function() {
     $(window).resize(checkScreenSize);
 });
 
-// Contagem regressiva
+// contagem regressiva
 function countdown() {
     const eventDate = new Date('September 13, 2024 00:00:00').getTime();
     const now = new Date().getTime();
@@ -39,7 +39,7 @@ function countdown() {
 
 const countdownInterval = setInterval(countdown, 1000);
 
-// Copiar chave PIX
+// chave PIX
 function copyPix() {
     var copyText = document.getElementById("pixKey").innerText;
     var textArea = document.createElement("textarea");
