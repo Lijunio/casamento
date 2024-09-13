@@ -14,7 +14,7 @@ $(document).ready(function() {
 
 // contagem regressiva
 function countdown() {
-    const eventDate = new Date('September 13, 2024 00:00:00').getTime();
+    const eventDate = new Date('September 13, 2024 20:00:00').getTime();
     const now = new Date().getTime();
     const distance = eventDate - now;
 
